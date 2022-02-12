@@ -1,29 +1,36 @@
-//Complete the code segment to check whether the number is an Armstrong number or not.
-//Armstrong Number:
-//A positive number is called an Armstrong number if it is equal to the sum of cubes of its digits for example 153 = 13+53+33, 370, 371, 407, etc.
+/*Consider First n even numbers starting from zero(0).Complete the code segment to calculate sum of  all the numbers divisible by 3 from 0 to n. Print the sum.
+Example:
+Input: n = 5
+-------
+0 2 4 6 8
+Even number divisible by 3:0 6
+sum:6*/
+
 import java.util.Scanner;
-public class Exercise1_4 {
-    public static void main(String[] args) {
+public class Exercise1_3 {
+       public static void main(String[] args) {
 	   Scanner sc = new Scanner(System.in);
 	   int n=sc.nextInt();
-           int result=0;
-//Use while loop check the number is Armstrong or not.
-int count=n;
-int c=0,v;
-	while(n>0)
+	  int sum=0;
+//Use for or while loop do the operation.
+int res=1;
+int  i =0;
+while(res<=n)
+{
+  if(i%2==0)
+  {
+    if(i%3==0)
     {
-      v=n%10;
-      n=n/10;
-      c=c+(v*v*v);
+      sum=sum+i;
+      
     }
-//store the output(1 or 0) in result variable.
-if(count==c)
-  result=1;
-else
-  result=0;
-System.out.println(result);
-
-
-
+    res=res+1;
+  }
+  i=i+1;
+}
+System.out.println(sum);
+    
+  		
+  
  }
 }
