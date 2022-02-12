@@ -1,39 +1,28 @@
-/*Consider First n even numbers starting from zero(0).Complete the code segment to calculate sum of  all the numbers divisible by 3 from 0 to n. 
-Print the sum.*/
-/*Example:
+/*Complete the code segment to find the largest among three numbers x,y, and z. You should use if-then-else construct in Java.*/
 
-Input: n = 5
 
--------
-0 2 4 6 8
-Even number divisible by 3:0 6
-sum:6*/
-//SOLUTION
-import java.util.Scanner;
-public class Exercise1_3 {
+
+import java.util.Scanner;  
+public class Exercise1_2 {
        public static void main(String[] args) {
-	   Scanner sc = new Scanner(System.in);
-	   int n=sc.nextInt();
-	  int sum=0;
-//Use for or while loop do the operation.
-int res=1;
-int  i =0;
-while(res<=n)
-{
-  if(i%2==0)
-  {
-    if(i%3==0)
-    {
-      sum=sum+i;
-      
-    }
-    res=res+1;
-  }
-  i=i+1;
-}
-System.out.println(sum);
-    
-  		
-  
+Scanner s = new Scanner(System.in); 
+        int x = s.nextInt(); 
+        int y = s.nextInt();
+int z = s.nextInt();
+int result = 0;
+if(x >= y && x >= z)
+        {
+            result=x;
+        }
+        else if(y >= z)
+        {
+            result=y;
+        }
+        else
+        {
+            result=z;
+        }
+     //Evaluation code 
+System.out.println(result);
  }
 }
