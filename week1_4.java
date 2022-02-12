@@ -1,39 +1,31 @@
-/*Complete the code segment to help Ragav , find the highest mark and average mark secured by him in "s" number of subjects.*/
+/*Complete the code segment to check whether the number is an Armstrong number or not.
+Armstrong Number:
+A positive number is called an Armstrong number if it is equal to the sum of cubes of its digits for example 153 = 13+53+33, 370, 371, 407, etc.*/
 
 
 import java.util.Scanner;
-public class Exercise1_5{
+public class Exercise1_4 {
     public static void main(String[] args) {
-	 Scanner input = new Scanner(System.in);
-         double mark_avg;
-         int result;
-         int i;
-         int s;
-      //define size of array
-       s = input.nextInt();
-     //The array is defined "arr" and inserted marks into it.
-      int[] arr = new int[s];   
-      for(i=0;i<arr.length;i++)
-	  {
-	arr[i]=input.nextInt();
-        }
-//Initialize maximum element as first element of the array.
-	int max=arr[0];
-	double sum=arr[0];
-   //Traverse array elements to get the current max.
-	for(i=1;i<arr.length;i++)
-	  { 
-         sum=sum+arr[i]; 
-         if(arr[i]>max)
-            max =arr[i];
-	  }
-   //Store the highest mark in the variable result.
-	//Store average mark in avgMarks.	
-	result=max;	
-    mark_avg=sum/(arr.length);  
+	   Scanner sc = new Scanner(System.in);
+	   int n=sc.nextInt();
+           int result=0;
+//Use while loop check the number is Armstrong or not.
+int count=n;
+int c=0,v;
+	while(n>0)
+    {
+      v=n%10;
+      n=n/10;
+      c=c+(v*v*v);
+    }
+//store the output(1 or 0) in result variable.
+if(count==c)
+  result=1;
+else
+  result=0;
+System.out.println(result);
 
-	System.out.println(result);
-    System.out.println(mark_avg);
+
 
  }
 }
